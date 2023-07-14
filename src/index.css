@@ -3,33 +3,8 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f2f2f2;
-  color: #4f4e4e;
 }
-.dark-mode-button {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  padding: 8px;
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-.dark-mode {
-  background-color: #161619;
-  color: white;
-}
-
-.main.dark-mode {
-  background-color: #1c1c21;
-  color: white;
-}
-
-.main {
+main {
   width: 500px;
   border-radius: 12px;
   margin: 0 auto;
@@ -37,9 +12,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
   padding: 40px;
+}
+.main-dark {
+  background-color: #1c1c21;
+}
+
+.main-light {
+  background-color: #ffffff;
 }
 
 .image {
@@ -56,7 +38,8 @@ body {
   font-weight: bold;
 }
 
-.main > h4 {
+.main-dark > h4,
+.main-light > h4 {
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
@@ -96,8 +79,8 @@ body {
 
 .footer {
   width: 100%;
-  padding: 20px;
-  background-color: #1a1b21;
+  padding: 10px;
+  background-color: #282d35;
   color: #ffffff;
   text-align: center;
   margin-top: 20px;
@@ -126,4 +109,86 @@ body {
 
 .footer > a:hover {
   color: #0a66c2;
+}
+
+/* NAV styles */
+
+.nav--logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav--logo_text {
+  color: #61dafb;
+  margin-right: auto;
+}
+
+.nav--title {
+  color: #deebf8;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2b283a;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #f5f5f5;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2b283a;
+}
+
+nav.dark .toggler--light {
+  color: #918e9b;
+}
+
+.toggler--dark {
+  color: #d5d4d8;
+}
+
+nav.dark .toggler-dark {
+  color: #ffffff;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+nav {
+  position: absolute;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
